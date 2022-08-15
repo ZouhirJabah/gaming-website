@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azkay Gaming</title>
+    <link rel="stylesheet" href="assests/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!--  Header -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">AZKAY <span> GAMES</span></a>
+            <ul class="nav">
+                <li><a href="index.html"><i class='bx bx-arrow-back'></i></a></li>
+            </ul>
+            <!-- Notification -->
+            <div class="notification">
+
+            </div>
+        </div>
+        <div class="toggleMenu" onclick="toggleMenu();"></div>
+    </header>
+
+    <!-- Games -->
+    <br><br><br><br><br><br><br>
+    <div class="games" id="games">
+        <h2>Popular Games</h2>
+        <ul>
+            <li class="list active" data-filter="all">All</li>
+            <li class="list" data-filter="pc">Pc Games</li>
+            <li class="list" data-filter="mobile">Mobile Games</li>
+        </ul>
+        <div class="cardBx">
+            <div class="card" data-item="pc">
+                <img src="assests/images/new1.png">
+                <div class="content">
+                    <h4>Grand Theft Auto</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p><span>$14.99</span></p>
+                        <a href="#">Play Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-item="pc">
+                <img src="assests/images/game2.jpg">
+                <div class="content">
+                    <h4>Dying Light2: Stay Human</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p><span>$40.19</span></p>
+                        <a href="#">Play Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-item="pc">
+                <img src="assests/images/game3.png">
+                <div class="content">
+                    <h4>Halo Infinite</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p><span>Free</span></p>
+                        <a href="#">Play Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-item="pc">
+                <img src="assests/images/game5.jpg">
+                <div class="content">
+                    <h4>Assassin's Creed Valhala</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p><span>$59.99</span></p>
+                        <a href="#">Play Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-item="pc">
+                <img src="assests/images/game6.jpg">
+                <div class="content">
+                    <h4>Battlefield 2042</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p><span>$29.99</span></p>
+                        <a href="#">Play Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-item="mobile">
+                <img src="assests/images/mobile2.jpg">
+                <div class="content">
+                    <h4>Subway Surfers Vancouver</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p><span>Free</span></p>
+                        <a href="#">Play Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-item="mobile">
+                <img src="assests/images/mobile1.jpg">
+                <div class="content">
+                    <h4>Call Of Duty: Mobile</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p><span>Free</span></p>
+                        <a href="#">Play Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-item="mobile">
+                <img src="assests/images/mobile5.jpg">
+                <div class="content">
+                    <h4>Free Guy</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p><span>Free</span></p>
+                        <a href="#">Play Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-item="mobile">
+                <img src="assests/images/mobile3.jpg">
+                <div class="content">
+                    <h4>Clash Royale</h4>
+                    <div class="progress-line"><span></span></div>
+                    <div class="info">
+                        <p><span>Free</span></p>
+                        <a href="#">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="info">
+            <a href="#" class="logo">AZKAY <span> GAMES</span></a>
+            <p>&#169; AZKAY All Right Reserved</p>
+
+            <ul>
+                <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+                <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+            </ul>
+
+        </div>
+    </footer>
+
+    <script>
+        /* Sticky NavBar */
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0)
+        });
+
+
+        /* Responsive NavBar*/
+        function toggleMenu() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const nav = document.querySelector('.nav');
+            toggleMenu.classList.toggle('active')
+            nav.classList.toggle('active')
+        }
+
+
+        /* Filterable Cards */
+        let list = document.querySelectorAll('.list');
+        let card = document.querySelectorAll('.card');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < card.length; k++) {
+                    card[k].classList.remove('active');
+                    card[k].classList.add('hide');
+
+                    if (card[k].getAttribute('data-item') == dataFilter || dataFilter == 'all') {
+                        card[k].classList.remove('hide');
+                        card[k].classList.add('active');
+                    }
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>
